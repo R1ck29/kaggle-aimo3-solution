@@ -1,7 +1,7 @@
 {
-  "id": "r1cky7/aimo-3-gpt-oss-120b-with-tools",
-  "title": "AIMO 3 GPT OSS 120B with Tools",
-  "code_file": "notebooks/aimo-3-gpt-oss-120b-with-tools _v6.ipynb",
+  "id": "r1cky7/aimo3-exp03-parser-vote",
+  "title": "AIMO3 exp03_parser_vote",
+  "code_file": "notebook.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": "true",

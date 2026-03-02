@@ -1,7 +1,15 @@
 {
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "ollama",
-    "ANTHROPIC_API_KEY": "",
-    "ANTHROPIC_BASE_URL": "http://localhost:11434"
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/kaggle_kernel_run.py*)",
+      "Bash(python3 scripts/create_experiment_notebooks.py*)",
+      "Bash(kaggle kernels status*)",
+      "Bash(kaggle kernels output*)",
+      "Bash(kaggle competitions leaderboard*)",
+      "Bash(wc -l notebooks/*.ipynb scripts/*.py 2>/dev/null)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)"
+    ]
   }
 }

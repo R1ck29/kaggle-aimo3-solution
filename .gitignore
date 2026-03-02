@@ -20,5 +20,15 @@ __pycache__/
 *.zip
 kaggle.json
 
+# Large model binaries
+*.tar.gz
+
+# Experiment run artifacts (logs, parquet outputs)
+experiments/*/runs/
+experiments/base_runs/
+
+# Claude Code worktrees
+.claude/worktrees/
+
 # OS
 .DS_Store
