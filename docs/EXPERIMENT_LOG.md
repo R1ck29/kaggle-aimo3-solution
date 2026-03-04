@@ -153,3 +153,29 @@ All notebooks generated via `scripts/create_experiment_notebooks.py`.
 - Kaggle limit: max 2 concurrent GPU sessions
 - exp07 original slug `aimo3-exp07-parser-vote-from-exp02` failed with "Notebook not found"; shortened to `aimo3-exp07-parser-vote-v2`
 - exp03 scored 38, same as V46 — wider parser may be matching false positives or vote-priority sort is hurting when some attempts produce wrong answers with high vote counts
+
+## 2026-03-04 Status Check
+
+### Leaderboard State
+- exp04_speed_profile: still **PENDING** (submitted 2026-03-02 04:09 UTC, 48+ hours)
+- exp05-exp08: all kernel COMPLETE, blocked from submission by exp04 PENDING
+
+### All Kernels Confirmed COMPLETE
+- exp05_more_attempts: `KernelWorkerStatus.COMPLETE`
+- exp06_prompt_verify: `KernelWorkerStatus.COMPLETE`
+- exp07_parser_vote_v2: `KernelWorkerStatus.COMPLETE`
+- exp08_combined_best: `KernelWorkerStatus.COMPLETE`
+
+### Submission Queue (sequential, one at a time)
+1. exp04 (PENDING — awaiting score)
+2. exp05_more_attempts (most promising — pure scaling)
+3. exp06_prompt_verify (promising — verification instruction)
+4. exp07/exp08 (lower priority — includes parser/vote changes that regressed in exp03)
+
+### Key Strategic Insight
+- **Wider parser + vote-priority sort is harmful** (exp03=38 vs exp02=40)
+- exp07 and exp08 include the same changes → may also regress
+- Safest bets: exp05 (more attempts) and exp06 (verification prompt)
+
+### Handover Document
+- Created `docs/HANDOVER.md` with full project context, current state, next steps, and operational gotchas

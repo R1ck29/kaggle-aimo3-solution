@@ -172,4 +172,4 @@ python3 scripts/create_experiment_notebooks.py
 
 ## Data & Model Files (git-ignored)
 
-`data/`, `models/`, `submissions/`, `*.zip`, `kaggle.json` are all in `.gitignore`. The model tarball `gpt-oss-120b.tar.gz` is tracked but large (~5GB).
+`data/`, `models/`, `submissions/`, `*.zip`, `*.tar.gz`, `kaggle.json`, `experiments/*/runs/` are all in `.gitignore`.

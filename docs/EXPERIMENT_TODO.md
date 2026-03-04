@@ -1,12 +1,14 @@
 # Experiment TODO (Target: Public Score > 40, Goal 43+)
 
-Updated: 2026-03-02
+Updated: 2026-03-04
 
 ## Execution Rules
-- Run experiments in order: `exp01` -> `exp02` -> `exp03` -> `exp04`.
+- V1 experiments run in order: `exp01` → `exp02` → `exp03` → `exp04` (cumulative).
+- V2 experiments branch independently from `exp02` (score=40): `exp05`–`exp08`.
 - Keep each experiment isolated under `experiments/<exp_key>/`.
 - Download outputs for every run and record the exact log path.
 - Update both this file and `docs/EXPERIMENT_LOG.md` after each experiment.
+- Full handover context: `docs/HANDOVER.md`.
 
 ## Global TODO
 - [x] Reconnect Kaggle CLI execution path (network requires escalated commands in this environment).
